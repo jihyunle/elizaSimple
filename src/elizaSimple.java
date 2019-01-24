@@ -12,6 +12,7 @@ public class elizaSimple {
         Scanner input = new Scanner(System.in);
         String response = " ";
         boolean quit = false;
+
         do {
             System.out.println("Enter your response here, or press Q to quit.");
             response = input.nextLine();
@@ -19,18 +20,16 @@ public class elizaSimple {
             quit = checkQuitCommand(response);
         }while (!quit);
 
-
         System.out.println(">>> END");
-
     }
+
 
     public static boolean checkQuitCommand(String r){
         boolean quit = false;
         if (r.equalsIgnoreCase("Q") || r.equalsIgnoreCase("I am feeling great")){
-            quit = true;}
-//        }else if (r.equalsIgnoreCase("I am feeling great")){
-//            quit = true;
-//        }
+            quit = true;
+        }
         return quit;
     }
+
 }
